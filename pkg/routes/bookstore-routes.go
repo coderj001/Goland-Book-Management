@@ -5,10 +5,10 @@ import (
 	"github.com/gorilla/mux"
 )
 
-var RegisterBookStoreRoutes = func(router *mux.Route) {
-	router.HandlerFunc("/book/", controllers.CreateBook).Methods("POST")
-	router.HandlerFunc("/book/", controllers.GetBook).Methods("GET")
-	router.HandlerFunc("/book/{bookid}", controllers.GetBookId).Methods("GET")
-	router.HandlerFunc("/book/{bookid}", controllers.UpdateBook).Methods("PUT")
-	router.HandlerFunc("/book/{bookid}", controllers.DeleteBook).Methods("DELETE")
+var RegisterBookStoreRoutes = func(router *mux.Router) {
+	router.HandleFunc("/book/", controllers.CreateBook).Methods("POST")
+	router.HandleFunc("/book/", controllers.GetBook).Methods("GET")
+	router.HandleFunc("/book/{bookid}", controllers.GetBookId).Methods("GET")
+	router.HandleFunc("/book/{bookid}", controllers.UpdateBook).Methods("PUT")
+	router.HandleFunc("/book/{bookid}", controllers.DeleteBook).Methods("DELETE")
 }
