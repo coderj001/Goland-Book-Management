@@ -8,8 +8,8 @@ import (
 	"github.com/gorilla/mux"
 )
 
-const port string = "localhost"
-const host string = ":3000"
+const port string = ":3000"
+const host string = "localhost"
 
 func main() {
 	var r = mux.NewRouter()
