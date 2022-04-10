@@ -8,7 +8,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
-const port string = ":3000"
+const port string = ":8080"
 const host string = "localhost"
 
 func main() {
